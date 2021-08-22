@@ -1,12 +1,17 @@
- {{#each this}}
-<h1 class="one-country__name">{{name}}</h1>
-<p class="country__capital"> Capital: {{capital}}</p>
-<p class="country__population">Population: {{population}}</p>
-<ul class="country__languages">
-    <p>Languages:</p>
-    {{#each languages}}
-    <li class="country_language">{{this.name}}</li>
-    {{/each}}
-</ul>
-<img src="{{flag}}" alt="{{name}}country flag" width = 350 class="country__flag">
+{{#each this}}
+  <h1 class='one-country__name'>{{name}}</h1>
+  <div class="container">
+    <div>
+        <p class='country__capital'> Capital: {{capital}}</p>
+      <p class='country__population'>Population: {{population}}</p>
+      <ul class='country__languages'>
+        <p>Languages:</p>
+        {{#each languages}}
+          <li class='country_language'>{{this.name}}</li>
+        {{/each}}
+      </ul>
+      </div>
+    <img src='{{flag}}' alt='{{name}}country flag' width='250' class='country__flag' />
+  </div>
+
 {{/each}}
